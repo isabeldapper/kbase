@@ -45,10 +45,11 @@ function pares(x, y) {
     for (i = x; i <= y; i++) {
         if (i % 2 == 0) {
             resultadoPares.push(i);
-        } 
-    }return resultadoPares
+        }
+    }
+    return resultadoPares
 }
-var p = pares(32, 321);
+var p = pares(32, 40);
 console.log(p);
 
 
@@ -66,6 +67,21 @@ Dica: para verificar se um vetor contém um valor, utilize o método indexOf
 
 ==============================================================================================================================*/
 
+var skills = ["Javascript", "ReactJS", "React Native"];
+
+function temHabilidade(skills) {
+    var skill = "Javascript";
+    if (skills.indexOf("Javascript") !== -1) {
+        console.log("Tem a skill");
+        return true
+    } else {
+        console.log("Não tem a skill");
+        return false
+    }
+};
+temHabilidade(skills); // true ou false
+
+
 
 /* =========================================================================================================================== 
 
@@ -82,23 +98,51 @@ experiencia(anosEstudo);
 
 ==============================================================================================================================*/
 
-/* =========================================================================================================================== 
+var anosEstudo = 4;
 
-Dado o seguinte vetor de objetos:
-var usuarios = [
- {
- nome: "Diego",
- habilidades: ["Javascript", "ReactJS", "Redux"]
- },
- {
- nome: "Gabriel",
- habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
- }
-];
-Escreva uma função que produza o seguinte resultado:
-O Diego possui as habilidades: Javascript, ReactJS, Redux
-O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
-Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
-com um separador utilize o join.
+function experiencia(anos) {
 
-==============================================================================================================================*/
+    var calcExp = anos;
+        switch (calcExp) {
+            case calcExp >= 0 && calcExp <= 1:
+                console.log(`Você tem ${calcExp} anos de exp, seu nível é: Iniciante`);
+                break;
+            case calcExp >= 1 && calcExp <= 3:
+                console.log(`Você tem ${calcExp} anos de exp, seu nível é: Intermediário`);
+                break;
+            case calcExp >= 3 && calcExp <= 6:
+                console.log(`Você tem ${calcExp} anos de exp, seu nível é: Avançado`);
+                break;
+            default:
+                console.log(`Você tem ${calcExp} anos de exp, seu nível é: Jedi Master `);
+                break;
+        };
+    };
+
+    experiencia(anosEstudo);
+
+    // De 0-1 ano: Iniciante
+    // De 1-3 anos: Intermediário
+    // De 3-6 anos: Avançado
+    // De 7 acima: Jedi Master
+
+    /* =========================================================================================================================== 
+
+    Dado o seguinte vetor de objetos:
+    var usuarios = [
+     {
+     nome: "Diego",
+     habilidades: ["Javascript", "ReactJS", "Redux"]
+     },
+     {
+     nome: "Gabriel",
+     habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+     }
+    ];
+    Escreva uma função que produza o seguinte resultado:
+    O Diego possui as habilidades: Javascript, ReactJS, Redux
+    O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+    Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
+    com um separador utilize o join.
+
+    ==============================================================================================================================*/
