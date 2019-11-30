@@ -11,20 +11,21 @@ var endereco = {
 
 =================================================================================================== */
 
-   var endereco = {
+var endereco = {
     rua: "Rua dos pinheiros",
     numero: 1293,
     bairro: "Centro",
     cidade: "São Paulo",
     uf: "SP"
-   };
+};
 
-   function address() {
+function address() {
     return `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com nº ${endereco.numero}.`
 }
 
 var a = address(endereco);
 console.log(a);
+
 
 
 /* =========================================================================================================================== 
@@ -36,6 +37,20 @@ function pares(x, y) {
 pares(32, 321);
 
 ==============================================================================================================================*/
+
+function pares(x, y) {
+
+    var resultadoPares = [];
+
+    for (i = x; i <= y; i++) {
+        if (i % 2 == 0) {
+            resultadoPares.push(i);
+        } 
+    }return resultadoPares
+}
+var p = pares(32, 321);
+console.log(p);
+
 
 
 /* =========================================================================================================================== 
