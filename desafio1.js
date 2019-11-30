@@ -98,51 +98,67 @@ experiencia(anosEstudo);
 
 ==============================================================================================================================*/
 
-var anosEstudo = 4;
+var anosEstudo = 7;
 
 function experiencia(anos) {
 
     var calcExp = anos;
-        switch (calcExp) {
-            case calcExp >= 0 && calcExp <= 1:
-                console.log(`Você tem ${calcExp} anos de exp, seu nível é: Iniciante`);
-                break;
-            case calcExp >= 1 && calcExp <= 3:
-                console.log(`Você tem ${calcExp} anos de exp, seu nível é: Intermediário`);
-                break;
-            case calcExp >= 3 && calcExp <= 6:
-                console.log(`Você tem ${calcExp} anos de exp, seu nível é: Avançado`);
-                break;
-            default:
-                console.log(`Você tem ${calcExp} anos de exp, seu nível é: Jedi Master `);
-                break;
-        };
+    switch (calcExp) {
+        case calcExp >= 0 && calcExp <= 1:
+            console.log(`Você tem ${calcExp} anos de exp, seu nível é: Iniciante`);
+            break;
+        case calcExp >= 1 && calcExp <= 3:
+            console.log(`Você tem ${calcExp} anos de exp, seu nível é: Intermediário`);
+            break;
+        case calcExp >= 3 && calcExp <= 6:
+            console.log(`Você tem ${calcExp} anos de exp, seu nível é: Avançado`);
+            break;
+        default:
+            console.log(`Você tem ${calcExp} anos de exp, seu nível é: Jedi Master `);
+            break;
     };
+};
 
-    experiencia(anosEstudo);
+experiencia(anosEstudo);
 
-    // De 0-1 ano: Iniciante
-    // De 1-3 anos: Intermediário
-    // De 3-6 anos: Avançado
-    // De 7 acima: Jedi Master
+// De 0-1 ano: Iniciante
+// De 1-3 anos: Intermediário
+// De 3-6 anos: Avançado
+// De 7 acima: Jedi Master
 
-    /* =========================================================================================================================== 
+/* =========================================================================================================================== 
 
-    Dado o seguinte vetor de objetos:
-    var usuarios = [
-     {
-     nome: "Diego",
-     habilidades: ["Javascript", "ReactJS", "Redux"]
-     },
-     {
-     nome: "Gabriel",
-     habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
-     }
-    ];
-    Escreva uma função que produza o seguinte resultado:
-    O Diego possui as habilidades: Javascript, ReactJS, Redux
-    O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
-    Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
-    com um separador utilize o join.
+Dado o seguinte vetor de objetos:
+var usuarios = [
+ {
+ nome: "Diego",
+ habilidades: ["Javascript", "ReactJS", "Redux"]
+ },
+ {
+ nome: "Gabriel",
+ habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+ }
+];
+Escreva uma função que produza o seguinte resultado:
+O Diego possui as habilidades: Javascript, ReactJS, Redux
+O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
+com um separador utilize o join.
 
-    ==============================================================================================================================*/
+==============================================================================================================================*/
+var usuarios = [{
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+    },
+    {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+    }
+];
+
+function exibeHabilidades(usuarios) {
+    for (usuario of usuarios) {
+        console.log("O " + usuario.nome + " possui as habilidades: " + usuario.habilidades.join(", "));
+    }
+}
+console.log(exibeHabilidades(usuarios));
