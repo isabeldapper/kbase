@@ -4,31 +4,29 @@ aparecer na tela.
 =======================================================================================================================*/
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Desafio 2</title>
-</head>
-<body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title > Desafio 2 </title> 
+    </head>
+    <body>
+        <button id="novo" > QUADRADO </button>
+        <div id="quadrado" > </div>
+        <script>
+            var botao = document.getElementById('novo');
+            var quadrados = document.getElementById('quadrado');
+            botao.onclick = function () {
+            var quadrado = document.createElement('div');
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.backgroundColor = 'red';
+            quadrados.appendChild(quadrado);
+            };
+        </script>
+    </body> 
+    </html>
+/</html>/
 
-    <button id="novo">QUADRADO</button>
-    <div id="quadrado"></div>
-
-<script>
-
-    var botao = document.getElementById('novo');
-    var quadrados = document.getElementById('quadrado');
-    botao.onclick = function(){
-        var quadrado = document.createElement('div');
-        quadrado.style.width = '100px';
-        quadrado.style.height = '100px';
-        quadrado.style.backgroundColor = 'red';
-        quadrados.appendChild(quadrado);
-    };
-   
-</script>
-</body>
-</html>
 
 
 /* =======================================================================================================================
@@ -45,6 +43,41 @@ function getRandomColor() {
 var newColor = getRandomColor(); // #E943F0
 =======================================================================================================================*/
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 2</title>
+</head>
+
+<body>
+    <button id="novo">QUADRADO</button>
+    <div id="quadrados"></div>
+    <script>
+        var botao = document.getElementById('novo');
+        var quadrados = document.getElementById('quadrados');
+        function getRandomColor() {
+            var codigo = "0123456789ABCDEF";
+            var cor = "#";
+            for (var i = 0; i < 6; i++) {
+                cor += codigo[Math.floor(Math.random() * 16)];
+            }
+            return cor;
+        }
+            botao.onclick = function () {
+            var quadrado = document.createElement('div');
+            quadrado.style.width = '100px';
+            quadrado.style.height = '100px';
+            quadrado.style.backgroundColor = '#F00';
+            quadrado.onmouseover = function () {
+                quadrado.style.backgroundColor = getRandomColor();
+            }
+            quadrados.appendChild(quadrado);
+        }
+    </script>
+</body>
+</html>
 
 /* =======================================================================================================================
 A partir do seguinte vetor:
