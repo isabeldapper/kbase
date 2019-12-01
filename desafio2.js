@@ -3,6 +3,33 @@ vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo 
 aparecer na tela.
 =======================================================================================================================*/
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio 2</title>
+</head>
+<body>
+
+    <button id="novo">QUADRADO</button>
+    <div id="quadrado"></div>
+
+<script>
+
+    var botao = document.getElementById('novo');
+    var quadrados = document.getElementById('quadrado');
+    botao.onclick = function(){
+        var quadrado = document.createElement('div');
+        quadrado.style.width = '100px';
+        quadrado.style.height = '100px';
+        quadrado.style.backgroundColor = 'red';
+        quadrados.appendChild(quadrado);
+    };
+   
+</script>
+</body>
+</html>
+
 
 /* =======================================================================================================================
 Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
